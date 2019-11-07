@@ -143,8 +143,8 @@ html, body {
 }
 
 #container {
-  -webkit-animation: swing 1600ms infinite alternate ease-in-out;
-          animation: swing 1600ms infinite alternate ease-in-out;
+  /*-webkit-animation: swing 1600ms infinite alternate ease-in-out;*/
+          /*animation: swing 1600ms infinite alternate ease-in-out;*/
 }
 
 @-webkit-keyframes swing {
