@@ -16,7 +16,7 @@ import css from '../css/css.css';
 // import Js Plugins/Entities
 
 //ES6 Module
-import Howler from 'howler';
+import $ from 'jquery' 
 
 window.h5 = {
     isPc: function() {
@@ -161,17 +161,17 @@ window.onload = function() {
     var animations = ['flash'];
     var animationName = '';
     // Show the wows
-    $('.wowCircle').on('mouseenter', function() {
-        animationName = animations[randInt(0, animations.length - 1)];
+    // $('.wowCircle').on('mouseenter', function() {
+    //     animationName = animations[randInt(0, animations.length - 1)];
 
-        $('.wow-overlay').show();
-        $('.wow-overlay .wow').addClass('animated ' + animationName);
-    });
+    //     $('.wow-overlay').show();
+    //     $('.wow-overlay .wow').addClass('animated ' + animationName);
+    // });
 
-    $('.wowCircle').on('mouseleave', function() {
-        $('.wow-overlay').hide();
-        $('.wow-overlay .wow').removeClass('animated ' + animationName);
-    });
+    // $('.wowCircle').on('mouseleave', function() {
+    //     $('.wow-overlay').hide();
+    //     $('.wow-overlay .wow').removeClass('animated ' + animationName);
+    // });
 
     function randInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
