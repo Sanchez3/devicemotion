@@ -1,196 +1,189 @@
-*{
-	margin: 0;
-	padding: 0;
-}
 body {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei";
-}
-* {
-  box-sizing: border-box;
+  background-color:#f1f1f1;
+  font:24px/1.8 normal normal  'Droid Serif', serif;
+  padding:20px;
 }
 
-html, body {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  background: #ffffff;
+body .main .text {
+  max-width:620px;
+  min-width:320px;
+  margin:0 auto;
+  text-align:center;
+  color:#666;
 }
 
-#string {
-  width: .1rem;
-  border-right: .1rem solid #777;
-  height: 45vmin;
-  -webkit-transform: translate3d(10vmin, 0, 0);
-          transform: translate3d(10vmin, 0, 0);
+
+body .main .text h1 {
+  padding:10px 20px;
+  background-color:#F4617B;
+  border-radius:10px;
+  color:#fff;
+  text-shadow:2px 2px 5px rgba(0,0,0,0.2);
 }
 
-#container {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translate3d(-50%, 0, 0);
-          transform: translate3d(-50%, 0, 0);
-  width: 20vmin;
-  -webkit-perspective: 2000px;
-          perspective: 2000px;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transform-origin: 50% 0%;
-          transform-origin: 50% 0%;
-  -webkit-transition: -webkit-transform 1s ease-out;
-  transition: -webkit-transform 1s ease-out;
-  transition: transform 1s ease-out;
-  transition: transform 1s ease-out, -webkit-transform 1s ease-out;
+body .main .text .wowauthor {
+  font-size:18px;
+  padding:10px 0;
+  font-family:"Consolas", monaco, monospace;
 }
 
-#box {
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+body .main .text .wowauthor a {
+  color:#26C544;
+  text-decoration:none;
+  border-bottom:1px dashed;
 }
 
-#lid {
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transform: translate3d(-1vmin, 0, 0);
-          transform: translate3d(-1vmin, 0, 0);
-}
-#lid .face {
-  width: 22vmin;
-  height: 5vmin;
-  background: #24c0c0;
-}
-#lid .face.top {
-  height: 22vmin;
-}
-#lid .face.front {
-  -webkit-transform: rotateY(0deg) translateZ(11vmin);
-          transform: rotateY(0deg) translateZ(11vmin);
-  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.1);
-}
-#lid .face.back {
-  -webkit-transform: rotateX(180deg) translateZ(11vmin);
-          transform: rotateX(180deg) translateZ(11vmin);
-  box-shadow: 0px -3px 2px rgba(0, 0, 0, 0.1);
-}
-#lid .face.left {
-  -webkit-transform: rotateY(-90deg) translateZ(11vmin);
-          transform: rotateY(-90deg) translateZ(11vmin);
-  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.1);
-}
-#lid .face.right {
-  -webkit-transform: rotateY(90deg) translateZ(11vmin);
-          transform: rotateY(90deg) translateZ(11vmin);
-  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.1);
-}
-#lid .face.top {
-  -webkit-transform: rotateX(90deg) translateZ(11vmin);
-          transform: rotateX(90deg) translateZ(11vmin);
-}
-#lid .face.bottom {
-  -webkit-transform: rotateX(-90deg) translateZ(11vmin);
-          transform: rotateX(-90deg) translateZ(11vmin);
+body .main .text .output-info {
+  font-size:24px;
+  margin:10px 0;
+  text-align:left;
+  font-family: Consolas, monaco, monospace;
 }
 
-.face {
-  width: 20vmin;
-  height: 20vmin;
-  background: #23bcbc;
-  position: absolute;
-  display: inline-block;
-  color: white;
-  font-size: 2rem;
-  opacity: 1;
-}
-.face.front {
-  -webkit-transform: rotateY(0deg) translateZ(10vmin);
-          transform: rotateY(0deg) translateZ(10vmin);
-}
-.face.back {
-  -webkit-transform: rotateX(180deg) translateZ(10vmin);
-          transform: rotateX(180deg) translateZ(10vmin);
-}
-.face.left {
-  -webkit-transform: rotateY(-90deg) translateZ(10vmin);
-          transform: rotateY(-90deg) translateZ(10vmin);
-}
-.face.right {
-  -webkit-transform: rotateY(90deg) translateZ(10vmin);
-          transform: rotateY(90deg) translateZ(10vmin);
-}
-.face.top {
-  -webkit-transform: rotateX(90deg) translateZ(10vmin);
-          transform: rotateX(90deg) translateZ(10vmin);
-}
-.face.bottom {
-  -webkit-transform: rotateX(-90deg) translateZ(10vmin);
-          transform: rotateX(-90deg) translateZ(10vmin);
-}
-.face .ribbon {
-  position: absolute;
-  background: #ccd;
-  border-right: 1px solid rgba(255, 255, 255, 0.95);
-  border-left: 1px solid rgba(255, 255, 255, 0.95);
-  width: 20%;
-  height: 100%;
-  margin: 0 40%;
-}
-.face .ribbon:nth-of-type(2) {
-  width: 100%;
-  height: 20%;
-  margin: 40% 0;
+body .main .text .output-info ul {
+  list-style-type:none;
+  padding:0 25px;
+  text-align:center;
 }
 
-#container {
-  /*-webkit-animation: swing 1600ms infinite alternate ease-in-out;*/
-          /*animation: swing 1600ms infinite alternate ease-in-out;*/
+body .main .text .output-info ul li {
+  display:block;
+  margin:15px 0;
 }
 
-@-webkit-keyframes swing {
-  0% {
-    -webkit-transform: rotateY(-30deg) rotateZ(40deg);
-            transform: rotateY(-30deg) rotateZ(40deg);
-  }
-  100% {
-    -webkit-transform: rotateY(30deg) rotateZ(-40deg);
-            transform: rotateY(30deg) rotateZ(-40deg);
-  }
+body .main .text .output-info ul li b {
+  display:inline-block;
+  border:4px solid rgba(0,0,0,0.2);
+  border-radius:10px;
+  width:60px;
+  text-align:center;
+  
+  color:#fff;
+  
+  background-color:#40C469;
+  box-shadow:inset 0 4px 5px rgba(255,255,255,0.5), 2px 2px 2px rgba(0,0,0,0.2);
+  text-shadow:2px 2px 0 rgba(0,0,0,0.2);
 }
 
-@keyframes swing {
-  0% {
-    -webkit-transform: rotateY(-30deg) rotateZ(40deg);
-            transform: rotateY(-30deg) rotateZ(40deg);
-  }
-  100% {
-    -webkit-transform: rotateY(30deg) rotateZ(-40deg);
-            transform: rotateY(30deg) rotateZ(-40deg);
-  }
+body .main .text .output-info ul li.y_axis b {
+  background-color:#478FF0;
 }
 
-/*canvas {
-  display: block;
-  cursor: none;
-}*/
+body .main .text .output-info ul li.z_axis b {
+  background-color:#FDB830;
+}
+
+body .main .text .output-info ul li .value {
+  text-align:right;
+  display:inline-block;
+  width:140px;
+}
 
 
-/*a {
-    text-decoration: none;
-    -webkit-tap-highlight-color: transparent;
-    outline: none;
-}*/
+.such_ball_much_wow {
+  border-radius:50%;
+  width:100px;
+  height:100px;
+  overflow:hidden;
+  
+  border:4px solid rgba(255,255,255,0.4);
+  box-shadow:2px 2px 10px rgba(0,0,0,0.1);
+  
+  position:fixed;
+  right:80%;
+  top:80%;
+  
+  margin-left:-50px; 
+  margin-top:-50px;
+  
+  -webkit-transition:0.4s opacity ease-in;
+  -moz-transition:0.4s opacity ease-in;
+  transition:0.4s opacity ease-in;
+}
+
+.such_ball_much_wow:hover {
+  opacity:0.1;
+}
 
 
-/*.no-pointer {
-    pointer-events: none;
-}*/
+.such_ball_much_wow img {
+  width:140%;
+  position:relative;
+  left:-20px;
+  height:auto;
+  display:block;
+}
 
 
-/*.no-userselect {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-}*/
+.wowCircle {
+  font-weight:800;
+  font-family:"Comic Sans MS", 'Comic Sans';
+  color:#EFA71E;
+  cursor:pointer;
+}
+
+
+/* Wow Overlay */
+.wow-overlay {
+  background-color:rgba(255,255,255,0.1);
+  font-family:"Comic Sans MS", sans-serif;
+  display:none;
+}
+
+.wow-overlay .wow {
+  color:#FF6A19;
+  position:absolute;
+  z-index:99;
+  text-shadow:1px 1px 0px rgba(0,0,0,0.0); 
+}
+
+.wow-overlay .wow.wow-1 {
+  top:56px;
+  left:10px;
+  -webkit-transform:rotate(-45deg);
+  -moz-transform:rotate(-45deg);
+}
+
+.wow-overlay .wow.wow-2 {
+  color:#0AA2FA;
+  top:156px;
+  left:310px;
+  -webkit-transform:rotate(15deg);
+  -moz-transform:rotate(15deg);
+}
+
+
+.wow-overlay .wow.wow-3 {
+  color:#0AFA48;
+  top:456px;
+  left:110px;
+  -webkit-transform:rotate(-30deg);
+  -moz-transform:rotate(-30deg);
+}
+
+
+.wow-overlay .wow.wow-4 {
+  color:#FF0E16;
+  top:50%;
+  left:50%;
+  -webkit-transform:rotate(-25deg);
+  -moz-transform:rotate(-25deg);
+}
+
+
+.wow-overlay .wow.wow-5 {
+  color:#FFDA0E;
+  top:8%;
+  left:80%;
+  -webkit-transform:rotate(15deg);
+  -moz-transform:rotate(15deg);
+}
+
+
+.wow-overlay .wow.wow-6 {
+  color:#FF11D8;
+  top:90%;
+  left:310px;
+  -webkit-transform:rotate(-10deg);
+  -moz-transform:rotate(-10deg);
+}
